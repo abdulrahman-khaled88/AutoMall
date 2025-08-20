@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AutoMall - Premium Car Dealership</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoMall</span>
+            </div>
+            
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="index.html#inventory">Inventory</a>
+                <a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Search cars..." disabled>
+                <a href="index.html#inventory"><i class="fas fa-search"></i></a>
+            </div>
+            
+            <div class="user-actions-signed-In" style="display: none;">
+                <div class="user-dropdown">
+                    <div class="user-profile">
+                        <i class="fas fa-user"></i>
+                        <span class="username">John Doe</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="PurchaseHistory.html"><i class="fas fa-history"></i> Purchase History</a>
+                        <a href="ListedCars.html"><i class="fas fa-car"></i> My Listed Cars</a>
+                        <a href="ChangePassword.html"><i class="fas fa-key"></i> Change Password</a>
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-actions">
+                <a href="Login.html"><i class="fas fa-user"></i></a>
+            </div>
+            
+            <div id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero" id="about">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About AutoMall</h1>
+                <p>Your trusted partner in finding the perfect vehicle for your needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2005, AutoMall began as a small family-owned dealership with a passion for connecting people with their dream cars. What started as a modest lot with a handful of vehicles has grown into one of the region's most trusted automotive retailers.</p>
+                    <p>Over the years, we've maintained our commitment to transparency, integrity, and exceptional customer service while expanding our inventory to include a wide range of makes and models to suit every budget and lifestyle.</p>
+                    <p>Our team of automotive experts brings decades of combined experience to help you navigate the car buying or selling process with confidence.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AutoMall dealership">
+                </div>
+            </div>
+            
+            <div class="about-grid reverse">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Customer service at AutoMall">
+                </div>
+                <div class="about-text">
+                    <h3>Our Approach</h3>
+                    <p>At AutoMall, we believe buying a car should be an exciting, stress-free experience. That's why we've developed a customer-first approach that prioritizes your needs and preferences above all else.</p>
+                    <p>We take the time to understand your lifestyle, budget, and driving habits to recommend vehicles that truly fit your requirements. Our no-pressure sales environment ensures you can browse at your own pace with expert guidance available when you need it.</p>
+                    <p>Every vehicle in our inventory undergoes a rigorous 150-point inspection process, so you can shop with confidence knowing you're getting a quality automobile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Integrity</h3>
+                    <p>We believe in honest, transparent dealings with every customer. No hidden fees, no pressure tactics - just straightforward car buying.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Quality</h3>
+                    <p>Every vehicle meets our strict quality standards. Our thorough inspection process ensures you get a reliable car that lasts.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Customer Care</h3>
+                    <p>Your satisfaction is our top priority. From your first visit to years after your purchase, we're here to support you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>18+</h3>
+                    <p>Years in Business</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>10,000+</h3>
+                    <p>Vehicles Sold</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Team Members</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>The passionate professionals behind AutoMall</p>
+            </div>
+            
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="John Smith">
+                    </div>
+                    <div class="member-info">
+                        <h3>John Smith</h3>
+                        <p>Founder & CEO</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sarah Johnson">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Johnson</h3>
+                        <p>Sales Director</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Michael Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Chen</h3>
+                        <p>Lead Mechanic</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Emily Rodriguez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Emily Rodriguez</h3>
+                        <p>Customer Relations</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoMall</span>
+                    </div>
+                    <p>Your trusted partner for buying and selling premium vehicles since 2005.</p>
+                    <div class="footer-social-links">
+                        <a href="#facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#inventory">Inventory</a></li>
+                        <li><a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Auto Street, Car City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@automall.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-7PM, Sat: 10AM-5PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMall. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="javaScript/main.js"></script>
+</body>
+</html>

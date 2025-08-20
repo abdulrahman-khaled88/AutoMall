@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Listed Cars - AutoMall</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .my-cars {
+            padding: 80px 0;
+        }
+
+        .car-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn-edit {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .btn-edit:hover {
+            background-color: #e0a800;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+
+        /* Status tags */
+        .status-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .featured-tag-Available {
+            background-color: #28a745;
+            /* Green */
+        }
+
+        .featured-tag-Sold {
+            background-color: #dc3545;
+            /* Red */
+        }
+
+        .add-car-btn {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .car-details {
+            height: 60%;
+        }
+
+        footer {
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoMall</span>
+            </div>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="index.html#inventory">Inventory</a>
+                <a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search cars..." disabled>
+                <button><a href="index.html#inventory"><i class="fas fa-search"></i></a></button>
+            </div>
+
+            <div class="user-actions-signed-In" style="display: none;">
+                <div class="user-dropdown">
+                    <div class="user-profile">
+                        <i class="fas fa-user"></i>
+                        <span class="username">John Doe</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="PurchaseHistory.html"><i class="fas fa-history"></i> Purchase History</a>
+                        <a href="ListedCars.html"><i class="fas fa-car"></i> My Listed Cars</a>
+                        <a href="ChangePassword.html"><i class="fas fa-key"></i> Change Password</a>
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-actions">
+                <a href="Login.html"><i class="fas fa-user"></i></a>
+            </div>
+
+            <div id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- My Listed Cars Section -->
+    <section class="my-cars">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Listed Cars</h2>
+                <p>Manage your vehicles listed for sale</p>
+            </div>
+
+            <div class="add-car-btn">
+                <a href="Sell-Your-Car.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add New Car</a>
+            </div>
+
+            <div class="car-grid">
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Toyota Camry">
+                        <span class="status-tag featured-tag-Available">Available</span>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Camry 2023</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 12,345 mi</span>
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-car"></i> Sedan</span>
+                        </div>
+                        <div class="car-price">
+                            <span>$28,999</span>
+                        </div>
+                        <div class="car-actions">
+                            <button class="btn btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Toyota Camry">
+                        <span class="status-tag featured-tag-Available">Available</span>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Camry 2023</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 12,345 mi</span>
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-car"></i> Sedan</span>
+                        </div>
+                        <div class="car-price">
+                            <span>$28,999</span>
+                        </div>
+                        <div class="car-actions">
+                            <button class="btn btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Toyota Camry">
+                        <span class="status-tag featured-tag-Available">Available</span>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Camry 2023</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 12,345 mi</span>
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-car"></i> Sedan</span>
+                        </div>
+                        <div class="car-price">
+                            <span>$28,999</span>
+                        </div>
+                        <div class="car-actions">
+                            <button class="btn btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoMall</span>
+                    </div>
+                    <p>Your trusted partner for buying and selling premium vehicles since 2005.</p>
+                    <div class="social-links">
+                        <a href="#facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#inventory">Inventory</a></li>
+                        <li><a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Auto Street, Car City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@automall.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-7PM, Sat: 10AM-5PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMall. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javaScript/main.js"></script>
+    <script src="javaScript/ListedCars.js"></script>
+</body>
+
+</html>

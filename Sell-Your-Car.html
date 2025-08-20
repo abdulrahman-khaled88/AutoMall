@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car | AutoMall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoMall</span>
+            </div>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="index.html#inventory">Inventory</a>
+                <a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search cars..." disabled>
+                <button> <a href="index.html#inventory"> <i class="fas fa-search"></i> </a> </button>
+            </div>
+
+            <div class="user-actions-signed-In" style="display: none;">
+                <div class="user-dropdown">
+                    <div class="user-profile">
+                        <i class="fas fa-user"></i>
+                        <span class="username">John Doe</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="PurchaseHistory.html"><i class="fas fa-history"></i> Purchase History</a>
+                        <a href="ListedCars.html"><i class="fas fa-car"></i> My Listed Cars</a>
+                        <a href="ChangePassword.html"><i class="fas fa-key"></i> Change Password</a>
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-actions">
+                <a href="Login.html"><i class="fas fa-user"></i></a>
+            </div>
+
+            <div id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="sell-hero">
+        <div class="container">
+            <h1>List Your Car For Sale</h1>
+            <p>Reach thousands of potential buyers by listing your vehicle in our marketplace. Manage your listing and
+                track interest through your account.</p>
+            <a href="#valuation" class="btn btn-primary">Sell Your Car Now</a>
+        </div>
+    </section>
+
+    <section class="sell-process">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Listing Works</h2>
+                <p>Get your car in front of buyers with these simple steps</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>1. Enter Your Details</h3>
+                    <p>Fill out our simple form with your car's details and upload photos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>2. Submit Your Listing</h3>
+                    <p>Your car will be reviewed and published in our marketplace.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>3. Receive Inquiries</h3>
+                    <p>Potential buyers will contact you through our platform.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>4. Track Your Listing</h3>
+                    <p>Monitor views and interest through your "My Listed Cars" page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sell-form-section" id="valuation">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 30px; color: var(--secondary-color);">Car Details</h2>
+                <form id="sellCarForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="make">Make</label>
+                            <select id="make" required>
+                                <option value="">Select Make</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Porsche">Porsche</option>
+                                <option value="Mercedes Benz">Mercedes Benz</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Range Rover">Range Rover</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Model</label>
+                            <input type="text" id="model" placeholder="e.g. Camry, Civic, etc." required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <select id="year" required>
+                                <option value="">Select Year</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mileage">Mileage</label>
+                            <input type="number" id="mileage" placeholder="Enter mileage" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="condition">Condition</label>
+                            <select id="condition" required>
+                                <option value="">Select Condition</option>
+                                <option value="New">New</option>
+                                <option value="Used">Used</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="transmission">Transmission</label>
+                            <select id="transmission" required>
+                                <option value="">Select Transmission</option>
+                                <option value="Automatic">Automatic</option>
+                                <option value="Manual">Manual</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" required>
+                                <option value="">Select Category</option>
+                                <option>Sedan</option>
+                                <option>SUV</option>
+                                <option>Truck</option>
+                                <option>Sports</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="fuelType">Fuel Type</label>
+                            <select id="fuelType" required>
+                                <option value="">Select Fuel Type</option>
+                                <option value="Gasoline">Gasoline</option>
+                                <option value="Diesel">Diesel</option>
+                                <option value="Electric">Electric</option>
+                                <option value="Hybrid">Hybrid</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Asking Price ($)</label>
+                            <input type="number" id="price" placeholder="Enter your asking price" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Photo</label>
+                        <div class="upload-area" id="uploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to upload</p>
+                            <small>JPEG or PNG</small>
+                            <input type="file" id="carImages" accept="image/*"  style="display: none;">
+                        </div>
+                        <div id="imagePreview"></div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary" id="List-My-Car-Btn">List My Car For Sale</button>
+                    </div>
+                </form>
+                <div id="uploadSuccessMessage"
+                    style="display: none; color: green; font-weight: bold; font-size: 1.5rem; padding-top: 2rem;">
+                    Car uploaded successfully!
+                </div>
+                <div id="uploadFailedMessage"
+                    style="display: none; color: red; font-weight: bold; font-size: 1.5rem; padding-top: 2rem;">
+                    Failed to upload car.
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoMall</span>
+                    </div>
+                    <p>Your trusted partner for buying and selling premium vehicles since 2005.</p>
+                    <div class="social-links">
+                        <a href="#facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#inventory">Inventory</a></li>
+                        <li><a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Auto Street, Car City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@automall.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-7PM, Sat: 10AM-5PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMall. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="javaScript/SellYourCar.js"></script>
+    <script src="javaScript/main.js"></script>
+</body>
+
+</html>

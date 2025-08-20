@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMall - Premium Car Dealership</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoMall</span>
+            </div>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#inventory">Inventory</a>
+                <a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search cars...">
+                <button class="search-btn"> <a href="#inventory"> <i class="fas fa-search"></i> </a> </button>
+            </div>
+
+            <div class="user-actions-signed-In" style="display: none;">
+                <div class="user-dropdown">
+                    <div class="user-profile">
+                        <i class="fas fa-user"></i>
+                        <span class="username">John Doe</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="PurchaseHistory.html"><i class="fas fa-history"></i> Purchase History</a>
+                        <a href="ListedCars.html"><i class="fas fa-car"></i> My Listed Cars</a>
+                        <a href="ChangePassword.html"><i class="fas fa-key"></i> Change Password</a>
+                        <a id="logout-btn" href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-actions">
+                <a href="Login.html"><i class="fas fa-user"></i></a>
+            </div>
+
+
+            <div id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Dream Car Today</h1>
+                <p>Browse our extensive collection of premium vehicles</p>
+                <div class="hero-buttons">
+                    <a href="#inventory" class="btn btn-primary">Inventory</a>
+                    <a href="Login.html" class="btn btn-secondary" id="Login-btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section class="inventory" id="inventory">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Vehicles</h2>
+                <div class="filter-options">
+                    <select class="Make">
+                        <option>All Makes</option>
+                        <option>Ford</option>
+                        <option>Porsche</option>
+                        <option>Mercedes Benz</option>
+                        <option>BMW</option>
+                        <option>Range Rover</option>
+                    </select>
+                    <select class="Category">
+                        <option>All Categories</option>
+                        <option>Sedan</option>
+                        <option>SUV</option>
+                        <option>Truck</option>
+                        <option>Sports</option>
+                    </select>
+                    <select class="Year">
+                        <option>All Years</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                    </select>
+                    <select class="Price">
+                        <option>All Prices</option>
+                        <option> $70,000</option>
+                        <option> $80,000</option>
+                        <option> $90,000</option>
+                        <option> $100,000</option>
+                    </select>
+                    <select class="Condition">
+                        <option>All Condition</option>
+                        <option>New</option>
+                        <option>Used</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="car-grid">
+
+
+                <!-- Car items will be loaded here dynamically -->
+                <!-- <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Toyota Camry">
+                        
+                        <span class="featured-tag">Used</span>
+                        
+
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Camry 2023</h3>
+                        <div class="car-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 12,345 mi</span>
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-car"></i> Sedan</span>
+                        </div>
+                        <div class="car-price">
+                            <span>$28,999</span>
+                            <button class="btn btn-inquire">Buy Now</button>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="car-card">
+                    <div class="car-transmission" data-id="Automatic">
+                        <div class="car-image">
+                            <img class="car-Photo" src="imges/374809ad-e048-44cd-841b-93ced38e72d5.webp" loading="lazy"
+                                alt="BMW M3">
+                            <!-- Used or New -->
+                            <span class="featured-tag-Used car-condition">Used</span>
+                            <!-- Used or New -->
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-Name">BMW M3 2019</h3>
+                            <div class="car-specs">
+                                <span class="car-mileage"><i class="fas fa-tachometer-alt"></i> 6,500 mi</span>
+                                <span class="car-fuelType"><i class="fas fa-gas-pump"></i> Diesel</span>
+                                <span class="car-category"><i class="fas fa-car"></i> Sports</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="car--price">$70,000</span>
+                                <button class="btn btn-inquire Buy-Now-Btn">Buy Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-transmission" data-id="Automatic">
+                        <div class="car-image">
+                            <img class="car-Photo" src="imges/9c090e04-b926-4713-9fd1-e198717b89b7.webp" loading="lazy"
+                                alt="BMW  M4 COMPETITION ">
+                            <!-- Used or New -->
+                            <span class="featured-tag-Used car-condition">Used</span>
+                            <!-- Used or New -->
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-Name">BMW M4 COMPETITION 2019</h3>
+                            <div class="car-specs">
+                                <span class="car-mileage"><i class="fas fa-tachometer-alt"></i> 9,000 mi</span>
+                                <span class="car-fuelType"><i class="fas fa-gas-pump"></i> Diesel</span>
+                                <span class="car-category"><i class="fas fa-car"></i> Sports</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="car--price">$70,000</span>
+                                <button class="btn btn-inquire Buy-Now-Btn">Buy Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-transmission" data-id="Automatic">
+                        <div class="car-image">
+                            <img class="car-Photo" src="imges/3db6a1ef-9983-42a4-a375-d619e393ac7a.webp" loading="lazy"
+                                alt="Ford F-150 Raptor">
+                            <!-- Used or New -->
+                            <span class="featured-tag-Used car-condition">Used</span>
+                            <!-- Used or New -->
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-Name">Ford F-150 Raptor 2021</h3>
+                            <div class="car-specs">
+                                <span class="car-mileage"><i class="fas fa-tachometer-alt"></i> 15,500 mi</span>
+                                <span class="car-fuelType"><i class="fas fa-gas-pump"></i> Gasoline</span>
+                                <span class="car-category"><i class="fas fa-car"></i> Truck</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="car--price">$80,000</span>
+                                <button class="btn btn-inquire Buy-Now-Btn">Buy Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-transmission" data-id="Automatic">
+                        <div class="car-image">
+                            <img class="car-Photo" src="imges/b98f4ca0-8859-4883-ab4e-dd7a7d4f6e14Unk.webp"
+                                loading="lazy" alt="Mercedes Benz  S560 ">
+                            <!-- Used or New -->
+                            <span class="featured-tag-New car-condition">New</span>
+                            <!-- Used or New -->
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-Name">Mercedes Benz S560 2022</h3>
+                            <div class="car-specs">
+                                <span class="car-mileage"><i class="fas fa-tachometer-alt"></i> 5,000 mi</span>
+                                <span class="car-fuelType"><i class="fas fa-gas-pump"></i> Gasoline</span>
+                                <span class="car-category"><i class="fas fa-car"></i> Sedan</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="car--price">$120,000</span>
+                                <button class="btn btn-inquire Buy-Now-Btn">Buy Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-transmission" data-id="Automatic">
+                        <div class="car-image">
+                            <img class="car-Photo" src="imges/3.webp" loading="lazy" alt="Porsche  911 Carrera S ">
+                            <!-- Used or New -->
+                            <span class="featured-tag-Used car-condition">Used</span>
+                            <!-- Used or New -->
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-Name">Porsche 911 Carrera S 2022</h3>
+                            <div class="car-specs">
+                                <span class="car-mileage"><i class="fas fa-tachometer-alt"></i> 18,000 mi</span>
+                                <span class="car-fuelType"><i class="fas fa-gas-pump"></i> Gasoline</span>
+                                <span class="car-category"><i class="fas fa-car"></i> Sports</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="car--price">$95,000</span>
+                                <button class="btn btn-inquire Buy-Now-Btn">Buy Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-transmission" data-id="Automatic">
+                        <div class="car-image">
+                            <img class="car-Photo" src="imges/5.webp" loading="lazy" alt="Range Rover Sport SVR">
+                            <!-- Used or New -->
+                            <span class="featured-tag-Used car-condition">Used</span>
+                            <!-- Used or New -->
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-Name">Range Rover Sport SVR 2023</h3>
+                            <div class="car-specs">
+                                <span class="car-mileage"><i class="fas fa-tachometer-alt"></i> 15,000 mi</span>
+                                <span class="car-fuelType"><i class="fas fa-gas-pump"></i> Gasoline</span>
+                                <span class="car-category"><i class="fas fa-car"></i> SUV</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="car--price">$89,000</span>
+                                <button class="btn btn-inquire Buy-Now-Btn">Buy Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+    </section>
+
+    <!-- Sell Your Car Section -->
+    <section class="sell-car" id="sell-car">
+        <div class="container">
+            <div class="sell-content">
+                <div class="sell-text">
+                    <h2>Sell Your Car With Us</h2>
+                    <p>Get the best value for your vehicle with our hassle-free selling process. We offer competitive
+                        prices and handle all the paperwork.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Check Your Car Worth</li>
+                        <li><i class="fas fa-check"></i> Sell with Confidence</li>
+                        <li><i class="fas fa-check"></i> Instant payment</li>
+                        <li><i class="fas fa-check"></i> No hidden fees</li>
+
+                    </ul>
+                    <a class="btn btn-primary" id="Sell-Now-BTN">Sell Now – Fast & Easy</a>
+                </div>
+                <div class="sell-image">
+                    <img src="imges/Bmw.webp" alt="Sell your car" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoMall</span>
+                    </div>
+                    <p>Your trusted partner for buying and selling premium vehicles since 2005.</p>
+                    <div class="social-links">
+                        <a href="#facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#inventory">Inventory</a></li>
+                        <li><a Class="Sell-Your-Car" style="cursor: pointer;">Sell Your Car</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Auto Street, Car City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@automall.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-7PM, Sat: 10AM-5PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMall. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javaScript/home.js"></script>
+    <script src="javaScript/main.js"></script>
+</body>
+
+</html>
